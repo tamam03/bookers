@@ -19,6 +19,7 @@ class ListsController < ApplicationController
    end
 
    def edit
+     @book
    end
 
 
