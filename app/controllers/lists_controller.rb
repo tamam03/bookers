@@ -7,7 +7,6 @@ class ListsController < ApplicationController
 
     book = Book.new(book_params)
     book.save
-    # トップへ遷移→showに
     redirect_to list_path(book.id)
    end
 
@@ -19,7 +18,7 @@ class ListsController < ApplicationController
    end
 
    def edit
-     @book
+      @book = Book.find(params[:id])
    end
 
 
