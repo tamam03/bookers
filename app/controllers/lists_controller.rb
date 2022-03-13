@@ -21,6 +21,12 @@ class ListsController < ApplicationController
       @book = Book.find(params[:id])
    end
 
+   def update
+     book = Book.find(params[:id])
+     book.update(book_params)
+     redirect_to list_path(book.id)
+  end
+
 
 
 
