@@ -1,2 +1,11 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>一覧</h1>
+<% @books.each do |book| %>
+
+<h5>Title</h5>
+<span><%= book.title %></span>
+
+<h5>Body</h5>
+<span><%= book.body %></span>
+
+<% end %>
+

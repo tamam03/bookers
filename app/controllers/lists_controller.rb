@@ -11,6 +11,7 @@ class ListsController < ApplicationController
    end
 
    def index
+     @books = Book.all
    end
 
    def show
@@ -25,7 +26,7 @@ class ListsController < ApplicationController
      book = Book.find(params[:id])
      book.update(book_params)
      redirect_to list_path(book.id)
-  end
+   end
 
 
 
