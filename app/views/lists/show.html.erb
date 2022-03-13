@@ -1,2 +1,13 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h5>Title:</h5>
+<p><%= @book.title %></p>
+
+<h5>Body:</h5>
+<p><%= @book.body %></p>
+
+
+<%= link_to "Edit",lists_edit_path %>
+<p>|</p>
+<%= link_to "Back",lists_new_path %>
+
+<!--横並びにさせたい-->
+<!--edit 未完成-->

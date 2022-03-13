@@ -1,24 +1,25 @@
 class ListsController < ApplicationController
    def new
-    @list = List.new
+    @book = Book.new
    end
 
    def create
 
-    list = List.new(list_params)
-    list.save
+    book = Book.new(book_params)
+    book.save
     # トップへ遷移→showに
-    redirect_to'/'
-  end
+    redirect_to list_path(book.id)
+   end
 
-  def index
-  end
+   def index
+   end
 
-  def show
-  end
+   def show
+      @book = Book.find(params[:id])
+   end
 
-  def edit
-  end
+   def edit
+   end
 
 
 
@@ -26,7 +27,7 @@ class ListsController < ApplicationController
 
   private
 
-  def list_params
-    params.require(:list).permit(:title,:body)
+  def book_params
+    params.require(:book).permit(:title,:body)
   end
 end
