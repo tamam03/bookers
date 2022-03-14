@@ -7,5 +7,8 @@
 <h5>Body</h5>
 <span><%= book.body %></span>
 
-<% end %>
 
+
+<%= link_to "Show",list_path(book.id) %>  <%= link_to "Edit",edit_list_path(book.id) %>  <%= link_to "Destroy",destroy_list_path(book.id),method: :delete,"data-confirm" => "Are you sure?" %>
+
+<% end %>

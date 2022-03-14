@@ -1,3 +1,8 @@
+ <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
+
+
 <h5>Title:</h5>
 <p><%= @book.title %></p>
 
@@ -5,9 +10,5 @@
 <p><%= @book.body %></p>
 
 
-<%= link_to "Edit",edit_list_path %>
-<p>|</p>
-<%= link_to "Back",books_new_path %>
+<%= link_to "Edit",edit_list_path %>|<%= link_to "Back",books_new_path %>
 
-<!--横並びにさせたい-->
-<!--edit 未完成-->
