@@ -14,53 +14,72 @@
  *= require_self
  */
 
-   {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   }
 
-  body {
-    margin: 33px;
+html {
     display: block;
-    }
+}
 
-  table {
+body {
+    display: block;
+    margin: 33px;
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
+ strong {
+    font-weight: bold;
+}
+
+
+
+p,td {
+  font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 13px;
+   line-height: 18px;
+  margin: 33px;
+}
+
+
+
+   table {
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
     text-indent: initial;
     border-spacing: 2px;
     border-color: grey;
-    }
+   }
 
-   thead {
+  thead {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
-    }
+  }
 
-
-   tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    }
-
-    tbody {
+  tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
-    }
+  }
 
-
-  tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    }
-
-  td {
+ th {
     display: table-cell;
     vertical-align: inherit;
-    }
+    font-weight: bold;
+    padding-bottom: 5px;
+   }
+
+ a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
+
+
